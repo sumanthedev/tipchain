@@ -2,6 +2,8 @@
 
 TipChain is a decentralized tipping platform built on the XION blockchain that allows creators to receive tips directly in XION cryptocurrency from their supporters. The platform leverages account abstraction and gasless transactions to provide a seamless experience for both creators and supporters.
 
+Try at https://tipchain.vercel.app
+
 ## Features
 
 ### For Creators
