@@ -1,8 +1,8 @@
 import { Cloudinary } from "@cloudinary/url-gen";
 import axios from 'axios';
 
-const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
-const uploadPreset = process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET;
+const cloudName = "f22";
+const uploadPreset = "tipchain"
 
 // Initialize Cloudinary
 export const cld = new Cloudinary({
