@@ -65,7 +65,7 @@ export default function CreateProfile() {
       
       try {
         const response = await client.queryContractSmart(CONTRACT_ADDRESS, {
-          get_profile_by_wallet: { wallet: account.bech32Address }
+          get_profile: { wallet: account.bech32Address }
         });
         
         if (response && response.profile) {

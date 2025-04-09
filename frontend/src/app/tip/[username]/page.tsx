@@ -78,14 +78,13 @@ export default function ProfilePage() {
     }
   }, [queryClient, memoizedUsername, account?.bech32Address]);
 
-  // Fetch tips received
   useEffect(() => {
     const fetchTips = async () => {
       if (!queryClient || !memoizedUsername) return;
       
       try {
         const response = await queryClient.queryContractSmart(CONTRACT_ADDRESS, {
-          get_tips_received: { username: memoizedUsername, limit: 10 }
+          get_tips: { username: memoizedUsername}
         });
         
         if (response.tips) {
@@ -101,7 +100,6 @@ export default function ProfilePage() {
     }
   }, [queryClient, memoizedUsername, tipSuccess]);
 
-  // Fetch user's XION balance
   useEffect(() => {
     const fetchBalance = async () => {
       if (!queryClient || !account?.bech32Address) return;

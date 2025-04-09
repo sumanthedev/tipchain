@@ -1,8 +1,8 @@
 import { Cloudinary } from "@cloudinary/url-gen";
 import axios from 'axios';
 
-const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
-const uploadPreset = process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET;
+const cloudName = "f22";
+const uploadPreset = "tipchain"
 
 // Initialize Cloudinary
 export const cld = new Cloudinary({
@@ -36,7 +36,7 @@ export const uploadToCloudinary = async (
 
   try {
     const response = await axios.post(
-      `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,
+      `https://api.cloudinary.com/2/${cloudName}/photo/upload`,
       formData,
       {
         headers: {
